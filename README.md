@@ -2,6 +2,12 @@
 
 league-connection is a python package to communicate to riot client and league client.
 
+## Installation
+
+```
+pip install league-connection
+```
+
 ## Examples
 
 ### Logging in (Riot Client)
