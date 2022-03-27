@@ -15,6 +15,11 @@ def get_connection_info(lockfile, timeout=30):
         with open(lockfile, 'r') as fp:
             data = fp.read()
             data = data.split(':')
+
+            if len(data) < 5:
+                time.sleep(1)
+                continue
+
             return {
                 'url': f'{data[4]}://127.0.0.1:{data[2]}',
                 'port': int(data[2]),
